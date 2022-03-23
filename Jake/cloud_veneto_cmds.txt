@@ -1,0 +1,6 @@
+Jupyter Port Foward
+jupyter notebook --no-browser --port=8887 &
+jupyter notebook stop 8887 
+ssh  -i .ssh/JJ_VM.pem ubuntu@10.67.22.155
+ssh  -i .ssh/JJ_VM.pem -N -f -L localhost:8887:localhost:8887 ubuntu@10.67.22.155
+ssh -N -f -L localhost:8887:localhost:8887 jacksonj@gate.cloudveneto.it
